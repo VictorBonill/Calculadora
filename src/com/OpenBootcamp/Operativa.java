@@ -16,7 +16,7 @@ public class Operativa extends Estado{
     @Override
     public void operar() {
         RecibeDatos in = new RecibeDatos();
-        in.getDatos();
+        in.obtenerDatos();
     }
 
     @Override

@@ -1,12 +1,16 @@
 package com.OpenBootcamp.operaciones;
 
+import com.OpenBootcamp.Respuesta;
+
 public class Suma implements Operador{
 
     @Override
-    public void hagaCalculo(String datosRecibidos) {
+    public Respuesta hagaCalculo(String datosRecibidos) {
+        Respuesta respuesta = Respuesta.getInstance();
         if (datosRecibidos.contains("+")){
             ObtenerOperandos numbers = new ObtenerOperandos(datosRecibidos, "\\+");
-            System.out.println(numbers.getNumberOne() + numbers.getNumberTwo());
+            respuesta.setRespuestaCorrecta(numbers.getNumberOne() + numbers.getNumberTwo());
         }
+        return respuesta;
     }
 }

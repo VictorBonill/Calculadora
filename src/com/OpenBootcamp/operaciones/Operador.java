@@ -1,5 +1,10 @@
 package com.OpenBootcamp.operaciones;
 
+import com.OpenBootcamp.Respuesta;
+
+/**
+ *
+ */
 public interface Operador {
-    void hagaCalculo(String datosrecibidos);
+    Respuesta hagaCalculo(String datosrecibidos);
 }
