@@ -3,7 +3,12 @@ package com.OpenBootcamp.operaciones;
 import com.OpenBootcamp.Respuesta;
 
 public class Resta implements Operador{
-
+    /**
+     * Debido a que dos números negativos pueden ser introducidos al mismo tiempo,
+     * es preciso identificar el primer operando y procesarlo de manera diferente.
+     * @param datosRecibidos valor tipo String recibido por linea de comandos
+     * @return valor tipo Respuesta
+     */
     @Override
     public Respuesta hagaCalculo(String datosRecibidos) {
         Respuesta respuesta = Respuesta.getInstance();

@@ -10,9 +10,11 @@ public class Respuesta {
     String respuestaInvalida = null;
 
     private Respuesta() {}
-    public Respuesta(double respuestaCorrecta) {
-        this.respuestaCorrecta = respuestaCorrecta;
-    }
+
+    /**
+     *
+     * @return una instancia, si ya existe, devuelve la que ya se había creado anteriormente
+     */
     public static Respuesta getInstance(){
         if (respuesta==null){
             respuesta = new Respuesta();
@@ -20,18 +22,34 @@ public class Respuesta {
         return respuesta;
     }
 
+    /**
+     *
+     * @return devuelve un valor tipo double
+     */
     public double getRespuestaCorrecta() {
         return respuestaCorrecta;
     }
 
+    /**
+     *
+     * @param respuestaCorrecta requiere un valor tipo double
+     */
     public void setRespuestaCorrecta(double respuestaCorrecta) {
         this.respuestaCorrecta = respuestaCorrecta;
     }
 
+    /**
+     *
+     * @return devuelve un valor tipo String
+     */
     public String getRespuestaInvalida() {
         return respuestaInvalida;
     }
 
+    /**
+     *
+     * @param respuestaInvalida requiere un valor tipo String
+     */
     public void setRespuestaInvalida(String respuestaInvalida) {
         this.respuestaInvalida = respuestaInvalida;
     }
