@@ -1,13 +1,15 @@
 package com.OpenBootcamp;
 
 /**
- * vBonilla@ 10/03/2022 - Implemento la clase Respuesta para dar solución al problema de devolver dos tipos de respuesta,
+ * Implemento la clase Respuesta para dar solución al problema de devolver dos tipos de respuesta,
  * además del double, es necesario devolver un null cuando el operador no es llamado.
+ * @author vbonilla.77@
+ * @since 10/03/2022
  */
 public class Respuesta {
     public static Respuesta respuesta;
     double respuestaCorrecta;
-    String respuestaInvalida = null;
+    boolean respuestaInvalida = false;
 
     private Respuesta() {}
 
@@ -42,7 +44,7 @@ public class Respuesta {
      *
      * @return devuelve un valor tipo String
      */
-    public String getRespuestaInvalida() {
+    public boolean getRespuestaInvalida() {
         return respuestaInvalida;
     }
 
@@ -50,7 +52,7 @@ public class Respuesta {
      *
      * @param respuestaInvalida requiere un valor tipo String
      */
-    public void setRespuestaInvalida(String respuestaInvalida) {
+    public void setRespuestaInvalida(boolean respuestaInvalida) {
         this.respuestaInvalida = respuestaInvalida;
     }
 }

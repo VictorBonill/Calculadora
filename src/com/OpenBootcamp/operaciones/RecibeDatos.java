@@ -8,7 +8,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- *
+ *Además de recibir el valor de entrada, realiza la suscripción de las operaciones en la calculadora de manera
+ * predeterminada mediante el constructor, y recupera el historial del archivo txt
  */
 public class RecibeDatos {
     Historial historial = new Historial();
@@ -32,9 +33,10 @@ public class RecibeDatos {
         Scanner scanner = new Scanner(System.in);
         do {
             datosRecibidos = scanner.next();
-            buscarOperador(datosRecibidos);
-            if(datosRecibidos.contains("h")){
+            if (datosRecibidos.contains("h")) {
                 System.out.println(calculosRealizados);
+            } else {
+                buscarOperador(datosRecibidos);
             }
         } while(!datosRecibidos.contains("fin"));
     }
